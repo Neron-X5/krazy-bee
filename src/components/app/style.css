@@ -1,0 +1,19 @@
+.app {
+  text-align: center;
+}
+
+.album-container {
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.album-info {
+  text-align: left;
+  padding: 2px 15px 0;
+  line-height: 0.6;
+}
+
+.album-info p {
+  color: gray;
+}

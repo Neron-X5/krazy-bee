@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>KrazyBee</title>
+  </head>
+  <body>
+    <div class="problem-statement problem-statement-a205bb83cdf040bd997a8a6fb7d4cbaf">
+      <div class="weight-700 large dark medium-margin-bottom">Reactjs Test</div>
+      <div class="file-problem complete-problem-statement dark">
+        <p>
+          We are going to use a couple of JSON APIs for this test. The first API is used to get a list of albums. The
+          second API is used to get a list of photos from each album. The&nbsp;json APIs are described below.
+        </p>
+
+        <hr />
+        <h2>Album Listing API</h2>
+
+        <p>API:&nbsp;<strong>https://jsonplaceholder.typicode.com/albums</strong></p>
+
+        <p>Doing a <strong>GET</strong> request will give a JSON output as shown below.&nbsp;</p>
+
+        <pre class="prettyprint"><code>[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "quidem molestiae enim"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "sunt qui excepturi placeat culpa"
+  }
+]</code></pre>
+
+        <p>
+          You will need to parse the json and have access to <strong>title, id&nbsp;</strong>and<strong> userId</strong
+          >. <strong>title</strong>&nbsp;(album title) and <strong>userId</strong>&nbsp;are used in the header section
+          as shown in output section.
+        </p>
+
+        <hr />
+        <h2>Album photos listing API</h2>
+
+        <p>
+          For each of the albums, you need to make another API call with the <strong>id</strong> given to
+          <strong>albumId&nbsp;</strong>parameter in the API as shown.
+        </p>
+
+        <p>API:&nbsp;<strong>https://jsonplaceholder.typicode.com/photos?albumId=1</strong></p>
+
+        <p>Doing a <strong>GET</strong> request will give a JSON output as shown below.</p>
+
+        <pre class="prettyprint"><code>[
+  {
+    "albumId": 1,
+    "id": 1,
+    "title": "accusamus beatae ad facilis cum similique qui sunt",
+    "url": "https://via.placeholder.com/600/92c952",
+    "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+  },
+  {
+    "albumId": 1,
+    "id": 2,
+    "title": "reprehenderit est deserunt velit ipsam",
+    "url": "https://via.placeholder.com/600/771796",
+    "thumbnailUrl": "https://via.placeholder.com/150/771796"
+  }
+]</code></pre>
+
+        <p>
+          You will need to parse the json and have access to <strong>id,&nbsp;</strong><strong>title</strong> and
+          <strong>url. </strong>These three are used in the card section as shown in the output below. Image from
+          <strong>url</strong> is shown as different color boxes. <strong>title</strong> is shown below image.
+          <strong>id</strong> is shown below title.
+        </p>
+
+        <hr />
+        <h1>Output</h1>
+
+        <p>
+          <img
+            alt=""
+            height="731"
+            src="https://he-s3.s3.amazonaws.com/media/uploads/384405ea-d534-4186-a75a-39d57e013bf0.png"
+            width="996"
+          />
+        </p>
+
+        <p>Each row is for an album. The album needs to be lazy loaded as we scroll down.&nbsp;</p>
+
+        <p>
+          Each album (row) is a carousel. As we scroll right or left using the buttons, the images need&nbsp;to be lazy
+          loaded.
+        </p>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </body>
+</html>
